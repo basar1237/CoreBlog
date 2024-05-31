@@ -8,8 +8,7 @@
 	<div class="container">
 		<h3 class="tittle">Bloglar</h3>
 		<div class="inner-sec">
-			<!--left-->
-			<div class="left-blog-info-w3layouts-agileits text-left">
+ 			<div class="left-blog-info-w3layouts-agileits text-left">
 				<div class="row">
 					@foreach (var item in Model)
 					{
@@ -37,15 +36,13 @@
 
 								</ul>
 								<h5 class="card-title   ">
-									<a href="single.html">@item.BlogTitle</a>
+									<a href="/Blog/BlogReadAll/@item.BlogId">@item.BlogTitle</a>
 								</h5>
 								<p class="card-text mb-3">@item.BlogContent.Substring(0,item.BlogContent.Substring(0,130).LastIndexOf(" "))...</p>
-								<a href="/Blog/Blogdetails/@item.BlogId" class="btn btn-primary read-m">Read More</a>
+								<a href="/Blog/BlogReadAll/@item.BlogId" class="btn btn-primary read-m">Devamını Oku</a>
 							</div>
 						</div>
 					}
-				 
-
 				</div>
  			</div>
 		</div>

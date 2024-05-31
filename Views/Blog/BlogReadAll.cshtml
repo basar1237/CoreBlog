@@ -1,0 +1,27 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+@{
+    ViewData["Title"] = "BlogDetails";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+ 
+ 
+<body>
+ 						@await Html.PartialAsync("_BannerBlogDetails")
+ 						@await Html.PartialAsync("~/Views/Comment/CommentListByBlog.cshtml")
+						@await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
+
+
+				<aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+					<div class="right-blog-info text-left">
+						@await Html.PartialAsync("_SignBlogs")
+					    @await Html.PartialAsync("_CategoriesBlogs")
+						@await Html.PartialAsync("_WriterBlogs")
+						@await Html.PartialAsync("_RecentPostsBlogDetail")
+					</div>
+
+				</aside>
+			</div>
+		</div>
+	</section>		
+</body>
+
